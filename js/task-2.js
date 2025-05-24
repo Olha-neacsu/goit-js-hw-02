@@ -1,9 +1,10 @@
 `use strict`;
 function formatMessage(message, maxLength) {
+    const shortMessage = message.slice(0, maxLength);
     if (message.length <= maxLength) {
         return message;
     } else if (message.length > maxLength) {
-        return `${message}...`;
+        return `${shortMessage}...`;
 }
 }
 
